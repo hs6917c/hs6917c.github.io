@@ -5,7 +5,7 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Youtube Thumbnail Downloder">
     <meta property="og:title" content="Youtube Thumbnail Downloder">
-    <meta name="by" content="Seong Baek">
+    <meta name="by" content="SeongMin Baek">
     <meta property="og:description" content="Youtube Thumbnail Downloder">
     <meta property="og:image" content="http://labs.junho85.pe.kr/creator/youtube-thumbnail-extractor.png">
     <meta name="keywords" content="youtube,thumbnail,downloader,extractor">
@@ -36,8 +36,8 @@ function get_video_id() {
         // https://youtu.be/2aI8sshVz6k
         return url.pathname.replace(/^\//, '');
     } else {
-        // https://www.youtube.com/watch?v=1QR1OuCEh8k
-        return url.searchParams.get("v");
+        // https://www.youtube.com/watch?v=oORlgTtoSwc
+        return url.searchParams.get("v"); // v=oORlgTtoSwc -> 이 부분을 가져온다.
     }
 }
 
@@ -152,13 +152,13 @@ $(document).ready(function() {
 </script>
 
 <div class="container">
-    <h2>Youtube Thumbnail Extractor</h2>
+    <h2>Youtube Thumbnail Downloder</h2>
     <form onsubmit="get_thumbnails(); return false;">
     <div class="input-group mb-3">
         <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon3">Video URL</span>
+            <span class="input-group-text" id="basic-addon3">URL : </span>
         </div>
-        <input type="text" class="form-control" id="youtube-video-url" aria-describedby="basic-addon3" placeholder="e.g. 유튜브 url을 입력해주세요." value="https://www.youtube.com/watch?v=oORlgTtoSwc">
+        <input type="text" class="form-control" id="youtube-video-url" aria-describedby="basic-addon3" placeholder="ex) https://www.youtube.com/watch?v=oORlgTtoSwc">
         <div class="input-group-append">
             <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="get_thumbnails()">Extract</button>
         </div>
@@ -171,10 +171,11 @@ $(document).ready(function() {
             src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
     </script>
 </div>
-
+<br>
 <footer class="container">
     <p>&copy; Baek SungMin</p>
 </footer>
+
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8585222-11"></script>
