@@ -1,6 +1,4 @@
-# hs6917c.github.io
-홈페이지를 만들다
+# Youtube Thumbnail Downloder
+my first html result.
 <br>
-Youtube Thumbnail downloder
-
-link: https://hs6917c.github.io/myweb.html
+### link: https://hs6917c.github.io/myweb.html
